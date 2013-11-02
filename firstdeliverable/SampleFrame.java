@@ -42,6 +42,14 @@ public class SampleFrame{
 	public static void repaint(){
 		frame.invalidate();
 		frame.repaint();
-		frame.validate();
+		frame.revalidate();
+	}
+	public static MapPanel start(Map map){
+		frame.getContentPane().removeAll();
+		MapPanel mapPanel = new MapPanel(map);
+		frame.add(mapPanel);
+		frame.revalidate();
+		frame.repaint();
+		return mapPanel;
 	}
 }

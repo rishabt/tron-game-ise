@@ -22,17 +22,15 @@ public class GameMaster {
 	}
 	
 	public void gameInit(){
-		mapPanel = new MapPanel(map);
+
 //NOTER:: May want some sort of score panel here
-		SampleFrame.removeAll();
-		SampleFrame.addPanel(mapPanel);
+		mapPanel= SampleFrame.start(map);
 	}
 	
 	public void gameStart(){
-		timer = new Timer(33, new GameTimer(mapPanel));
+		timer = new Timer(500, new GameTimer(mapPanel));
 		timer.start();
 	}
-	
 	public static void gameEnd(){
 		timer.stop();
 	}

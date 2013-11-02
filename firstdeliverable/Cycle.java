@@ -6,6 +6,7 @@ public class Cycle {
 	private int xPos;
 	private int yPos;
 	private int curHeading;
+	private int playerNum;
 	//0-> left
 	//1 -> right
 	//2 -> up
@@ -14,10 +15,11 @@ public class Cycle {
 	//NOTER should make curHeading an enum if possible
 	
 	
-	public Cycle(int xPos, int yPos, int curHeading){
+	public Cycle(int xPos, int yPos, int curHeading, int playerNum){
 		this.xPos = xPos;
 		this.yPos = yPos;
 		this.curHeading = curHeading;
+		this.playerNum = playerNum;
 	}
 	
 	public void setXPos(int i){
@@ -37,5 +39,8 @@ public class Cycle {
 	}
 	public int getCurHeading(){
 		return curHeading;
+	}
+	public int getPlayerNum(){
+		return playerNum;
 	}
 }
