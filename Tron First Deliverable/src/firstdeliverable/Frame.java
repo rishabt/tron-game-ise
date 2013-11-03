@@ -46,13 +46,13 @@ public class Frame{
 	public static void repaint(){
 		frame.invalidate();
 		frame.repaint();
-		frame.revalidate();
+		frame.validate();
 	}
 	public static MapPanel start(Map map){
 		frame.getContentPane().removeAll();
 		MapPanel mapPanel = new MapPanel(map);
 		frame.add(mapPanel);
-		frame.revalidate();
+		frame.validate();
 		frame.repaint();
 		return mapPanel;
 	}
