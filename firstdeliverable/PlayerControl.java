@@ -1,3 +1,7 @@
+/**
+ * @author Geoffrey Long
+ */
+
 package firstdeliverable;
 
 public class PlayerControl {
@@ -11,7 +15,6 @@ public class PlayerControl {
 	public void setHeading(int i){
 		//cycleTwo methods
 		//left
-		System.out.println(i);
 		if (i==65){
 			cycleOne.setCurHeading(0);
 		}

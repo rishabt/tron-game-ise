@@ -1,3 +1,6 @@
+/**
+ * @author Geoffrey Long
+ */
 package firstdeliverable;
 
 
@@ -24,11 +27,11 @@ public class GameMaster {
 	public void gameInit(){
 
 //NOTER:: May want some sort of score panel here
-		mapPanel= SampleFrame.start(map);
+		mapPanel= Frame.start(map);
 	}
 	
 	public void gameStart(){
-		timer = new Timer(250, new GameTimer(mapPanel));
+		timer = new Timer(100, new GameTimer(mapPanel));
 		timer.start();
 	}
 	public static void gameEnd(){

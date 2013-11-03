@@ -1,6 +1,8 @@
+/**
+ * @author Rishabh Tandon
+ */
+
 package firstdeliverable;
-
-
 
 public class Cycle {
 	private int xPos;
@@ -11,8 +13,6 @@ public class Cycle {
 	//1 -> right
 	//2 -> up
 	//3 -> down
-	
-	//NOTER should make curHeading an enum if possible
 	
 	
 	public Cycle(int xPos, int yPos, int curHeading, int playerNum){

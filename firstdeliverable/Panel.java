@@ -1,3 +1,7 @@
+/**
+ * @author Rishabh Tandon
+ */
+
 package firstdeliverable;
 
 import javax.swing.*;
@@ -16,7 +20,7 @@ public class Panel extends JPanel implements ActionListener{
 		makeLayout();
 	}
 	 public Dimension getPreferredSize() {
-	        return new Dimension(SampleFrame.getXSize(),SampleFrame.getYSize());
+	        return new Dimension(Frame.getXSize(),Frame.getYSize());
 	  }
 	
 	public void makeComponents(){

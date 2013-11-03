@@ -1,3 +1,6 @@
+/**
+ * @author Geoffrey Long
+ */
 package firstdeliverable;
 import java.awt.Frame;
 import java.awt.event.ActionEvent;

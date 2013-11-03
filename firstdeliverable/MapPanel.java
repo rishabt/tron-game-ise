@@ -1,5 +1,7 @@
+/**
+ * @author Geoffrey Long
+ */
 package firstdeliverable;
-
 
 import java.awt.Color;
 import java.awt.Dimension;
@@ -26,6 +28,8 @@ public class MapPanel extends JPanel implements KeyListener{
 	private int playerNum;
 	private int theSize = 5;
 	private boolean gameStart = true;
+	private int lastDirOne = -1;
+	private int lastDirTwo = -1;
 	
 	public MapPanel(Map map){
 		this.map = map.getMap();
@@ -43,30 +47,38 @@ public class MapPanel extends JPanel implements KeyListener{
 	}
 	
 	public Dimension getPreferredSize() {
-	        return new Dimension(SampleFrame.getXSize(),SampleFrame.getYSize());
-	}
+        return new Dimension(Frame.getXSize(),Frame.getYSize());
+}
 	public void updateMap(){
 		this.setFocusable(true);
         this.requestFocusInWindow();
 		for (Cycle cycle : cycles){
 			int curDir = cycle.getCurHeading();
-			System.out.println(curDir);
 			playerNum = cycle.getPlayerNum();
 			//UML:: could make curHeading an enum in the cycle class
 			//this would make it much nicer in this switch statement
 			//It would make it way more understandable instead of this number crap
+			
+			//NOTER:: can make this "better" by putting last dir in the cycle class
+			int incrementation = 1;
+			if (playerNum == 1 && curDir != lastDirOne){
+				incrementation = 5;
+			}
+			if (playerNum == 2 && curDir != lastDirTwo){
+				incrementation = 5;
+			}
 			switch (curDir){
 				case 0:
-					cycle.setXPos(cycle.getXPos()-5);
+					cycle.setXPos(cycle.getXPos()-incrementation);
 					break;
 				case 1:
-					cycle.setXPos(cycle.getXPos()+5);
+					cycle.setXPos(cycle.getXPos()+incrementation);
 					break;
 				case 2:
-					cycle.setYPos(cycle.getYPos()+5);
+					cycle.setYPos(cycle.getYPos()+incrementation);
 					break;
 				case 3:
-					cycle.setYPos(cycle.getYPos()-5);
+					cycle.setYPos(cycle.getYPos()-incrementation);
 					break;
 				default:
 					//NOTER:: add a default exception throw
@@ -74,7 +86,6 @@ public class MapPanel extends JPanel implements KeyListener{
 			//UML:: this next part could be its own method
 			if (map[cycle.getXPos()][cycle.getYPos()]!=0){
 				//Noter:: explosion method
-				System.out.println("hello");
 				GameMaster.gameEnd();
 			}
 			else{
@@ -127,7 +138,6 @@ public class MapPanel extends JPanel implements KeyListener{
 	
 	@Override
 	public void keyPressed(KeyEvent e) {
-		System.out.println("Keypress!!!");
 		cont.setHeading(e.getKeyCode());
 	}
 	@Override
