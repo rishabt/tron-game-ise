@@ -13,13 +13,15 @@ public class Cycle {
 	//1 -> right
 	//2 -> up
 	//3 -> down
+	public boolean isAlive;
 	
 	
-	public Cycle(int xPos, int yPos, int curHeading, int playerNum){
+	public Cycle(int xPos, int yPos, int curHeading, int playerNum, boolean isAlive){
 		this.xPos = xPos;
 		this.yPos = yPos;
 		this.curHeading = curHeading;
 		this.playerNum = playerNum;
+		this.isAlive = isAlive;
 	}
 	
 	public void setXPos(int i){

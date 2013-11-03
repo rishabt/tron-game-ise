@@ -13,12 +13,20 @@ import javax.swing.Timer;
 
 public class GameTimer implements ActionListener{
 	MapPanel mapPanel;
+	int counter = 0;
 	
 	public GameTimer(MapPanel mapPanel) {
 		this.mapPanel = mapPanel;
 	}
 	
 	public void actionPerformed(ActionEvent evt){
-		mapPanel.updateMap();
+		//if (counter >= 4){
+			mapPanel.updatePlayer();
+		/*	counter = 0;
+		}
+		else{
+			mapPanel.updateMap();
+			counter++;
+		}*/
 	}
 }
