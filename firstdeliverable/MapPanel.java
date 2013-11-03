@@ -35,18 +35,22 @@ public class MapPanel extends JPanel implements KeyListener{
 		setVisible(true);
 		
 		addKeyListener(this);
+		
 		Cycle cycleOne = new Cycle(200, 400, 1, 1);
 		Cycle cycleTwo = new Cycle(400, 400, 0, 2);
-		cycles = new Cycle[]{cycleOne, cycleTwo};
 		cont = new PlayerControl(cycleOne, cycleTwo);
+		cycles = new Cycle[]{cycleOne, cycleTwo};
 	}
 	
 	public Dimension getPreferredSize() {
 	        return new Dimension(SampleFrame.getXSize(),SampleFrame.getYSize());
 	}
 	public void updateMap(){
+		this.setFocusable(true);
+        this.requestFocusInWindow();
 		for (Cycle cycle : cycles){
 			int curDir = cycle.getCurHeading();
+			System.out.println(curDir);
 			playerNum = cycle.getPlayerNum();
 			//UML:: could make curHeading an enum in the cycle class
 			//this would make it much nicer in this switch statement
