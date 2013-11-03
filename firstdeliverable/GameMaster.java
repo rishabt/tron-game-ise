@@ -28,7 +28,7 @@ public class GameMaster {
 	}
 	
 	public void gameStart(){
-		timer = new Timer(1000, new GameTimer(mapPanel));
+		timer = new Timer(250, new GameTimer(mapPanel));
 		timer.start();
 	}
 	public static void gameEnd(){
