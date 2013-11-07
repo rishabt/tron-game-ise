@@ -44,14 +44,13 @@ public class Panel extends JPanel implements ActionListener{
 	
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		/*
 		if(e.getActionCommand()=="Start Game"){
 			Map map = new Map();
 			map.setDefaultMap();
 			GameMaster game = new GameMaster(5, map, Color.RED, Color.BLUE);
 			game.gameInit();
 			game.gameStart();
-		}*/
+		}
 	}
 	
 }

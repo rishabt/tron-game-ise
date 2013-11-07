@@ -56,7 +56,7 @@ public class MapPanel extends JPanel implements KeyListener{
 	public Dimension getPreferredSize() {
         return new Dimension(Frame.getXSize(),Frame.getYSize());
 	}
-	/*
+
 	public void updateMap(){
 		this.setFocusable(true);
         this.requestFocusInWindow();
@@ -116,7 +116,7 @@ public class MapPanel extends JPanel implements KeyListener{
 			}
 			
 		}
-	}*/
+	}
 	public void updatePlayer(){
 		this.setFocusable(true);
         this.requestFocusInWindow();

@@ -35,7 +35,6 @@ public class Frame{
 		frame.pack();
 		frame.validate();
 	}
-	/*
 	public static MapPanel start(Map map){
 		frame.getContentPane().removeAll();
 		MapPanel mapPanel = new MapPanel(map);
@@ -43,5 +42,5 @@ public class Frame{
 		frame.validate();
 		frame.repaint();
 		return mapPanel;
-	}*/
+	}
 }
