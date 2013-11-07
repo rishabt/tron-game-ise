@@ -24,10 +24,10 @@ public class MapPanel extends JPanel implements KeyListener{
 	private int[][] map;
 	private int xSize;
 	private int ySize;
-	public int xPosOne;
-	public int yPosOne;
-	public int xPosTwo;
-	public int yPosTwo;
+	private int xPosOne;
+	private int yPosOne;
+	private int xPosTwo;
+	private int yPosTwo;
 	private int playerNum;
 	private int theSize = 5;
 	private boolean gameStart = true;
@@ -35,8 +35,8 @@ public class MapPanel extends JPanel implements KeyListener{
 	private int lastDirTwo = 0;
 	private boolean isAliveOne = true;
 	private boolean isAliveTwo = true;
-	int explosionCount = 0;
-	Timer explosionTimer;
+	private int explosionCount = 0;
+	private Timer explosionTimer;
 	
 	public MapPanel(Map map){
 		this.map = map.getMap();
