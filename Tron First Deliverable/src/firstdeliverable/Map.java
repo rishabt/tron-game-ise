@@ -13,20 +13,6 @@ public class Map {
 	public int[][] getMap(){
 		return map;
 	}
-	public int[][] getMap(int i){
-		setMap(i);
-		return map;
-	}
-	
-	public int[][] getMap(int i, int height, int width){
-		return map;
-	}
-	private void setMap(int i){
-		
-		if (i == 1){
-		}
-		
-	}
 	private void setBorder(int height, int width){
 		for (int i = 0; i<height; i++){
 			for (int j = 0; j<width; j++){
@@ -44,9 +30,6 @@ public class Map {
 		setBorder(DEFAULT_MAP_SIZE, DEFAULT_MAP_SIZE);
 		this.xSize = DEFAULT_MAP_SIZE;
 		this.ySize = DEFAULT_MAP_SIZE;
-	}
-	public void customMap(int[][] map){
-		this.map = map;
 	}
 	public int getXSize(){
 		return this.xSize;

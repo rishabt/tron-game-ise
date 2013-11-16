@@ -19,10 +19,9 @@ public class Panel extends JPanel implements ActionListener{
 		makeComponents();
 		makeLayout();
 	}
-	 public Dimension getPreferredSize() {
-	        return new Dimension(Frame.getXSize(),Frame.getYSize());
-	  }
-	
+	public Dimension getPreferredSize() {
+		return new Dimension(Frame.getXSize(),Frame.getYSize());
+	}
 	public void makeComponents(){
 		title = new JLabel("Prototype Demonstration I");
 		title.setFont(new Font("Times", Font.BOLD, 37));
@@ -36,7 +35,6 @@ public class Panel extends JPanel implements ActionListener{
 		description.setFont(new Font("Times", Font.BOLD, 10));
 		description.setBounds(100, 500, 510, 45);
 	}
-	
 	public void makeLayout(){
 		setLayout(null);
 		add(title);

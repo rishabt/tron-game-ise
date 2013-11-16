@@ -35,24 +35,11 @@ public class Frame{
 		frame.pack();
 		frame.validate();
 	}
-	public static void removePanel(JPanel panel){
-		frame.remove(panel);
-		frame.repaint();
-	}
-	public static void removeAll(){
-		frame.getContentPane().removeAll();
-		frame.repaint();
-	}
-	public static void repaint(){
-		frame.invalidate();
-		frame.repaint();
-		frame.revalidate();
-	}
 	public static MapPanel start(Map map){
 		frame.getContentPane().removeAll();
 		MapPanel mapPanel = new MapPanel(map);
 		frame.add(mapPanel);
-		frame.revalidate();
+		frame.validate();
 		frame.repaint();
 		return mapPanel;
 	}
