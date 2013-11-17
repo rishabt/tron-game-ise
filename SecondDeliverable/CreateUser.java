@@ -79,6 +79,12 @@ public class CreateUser extends JPanel implements ActionListener{
 				DatabaseCalls call = new DatabaseCalls(conn);
 				
 				call.createUser(usernameField.getText(), passwordField.getText());
+
+				
+				Main2.frame.getContentPane().removeAll();
+				Main2.frame.getContentPane().add(new LoggedIn(usernameField.getText()));
+				Main2.frame.setVisible(true);
+
 			}
 		}
 		
