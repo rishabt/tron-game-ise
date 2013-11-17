@@ -27,7 +27,7 @@ public class GameMaster {
 	public void gameInit(){
 
 		//NOTER:: May want some sort of score panel here
-				mapPanel= Frame.start(map);
+		mapPanel= Frame.start(map);
 			}
 			
 			public void gameStart(){

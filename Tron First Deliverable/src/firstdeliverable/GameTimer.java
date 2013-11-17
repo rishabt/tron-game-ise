@@ -21,7 +21,7 @@ public class GameTimer implements ActionListener{
 	
 	public void actionPerformed(ActionEvent evt){
 		//if (counter >= 4){
-			mapPanel.updatePlayer();
+		mapPanel.updatePlayer();
 		/*	counter = 0;
 		}
 		else{
