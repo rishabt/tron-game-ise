@@ -1,4 +1,4 @@
-
+package deliverable2;
 
 import javax.swing.*;
 
@@ -66,10 +66,14 @@ public class LoginGUI extends JPanel implements ActionListener{
 			DatabaseCalls call = new DatabaseCalls(conn);
 			
 			String password = passwordField.getPassword().toString();
-			boolean pass = call.login(usernameField.getText(), password);
+			boolean pass = call.login(usernameField.getText(), passwordField.getText());
+			
+			System.out.println(pass);
 			
 			if(pass){
-				
+				Main2.frame.getContentPane().removeAll();
+				Main2.frame.getContentPane().add(new LoggedIn(usernameField.getText()));
+				Main2.frame.setVisible(true);
 			}
 			
 			else{
